@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math</title>
+</head>
+<body>
+    <script>
+
+
+       /* //根据输入的时间取整
+        var inputNum =Math.abs(prompt("请输入本次的运动时间")) ;
+
+        var newTime ;
+
+        if(inputNum > 20){
+
+            newTime = Math.ceil(inputNum);
+
+        }else if( inputNum < 20 ){
+
+            newTime  = Math.floor(inputNum);
+
+        }
+
+        document.write("您本次运动时间为"+newTime+"分钟");*/
+
+
+
+/*
+//       随机产生十个整数，放入数组中，对这个数组进行降序排序，并获取到这个数组的最大值和最小值
+
+        var arr  = new Array();
+
+        var arrSort ;
+
+        for(var i = 0 ; i < 10 ; i ++){
+            arr[i] = Math.floor(Math.random()*(100-0+1)+0);
+        }
+
+        arrSort = arr.sort(function (a,b) {
+            return a < b;
+        });
+
+
+
+       document.write(arrSort + "<br/>");
+
+       document.write("这组数中最大的值是："+ arrSort[0] + "，最小的值是：" + arrSort[9]);
+
+
+        console.log(arrSort);*/
+
+
+
+//        根据输入的数字做猜谜
+        do{
+            var inputNum = prompt("请输入你猜的数字");
+
+            var ranNum = Math.floor(Math.random()*(9-1+1)+1);
+
+            console.log(ranNum);
+
+
+            if (inputNum > ranNum){
+                alert("输入的数字大了");
+            }else if (inputNum < ranNum){
+                alert("输入的数字小了");
+            }
+
+        }while(inputNum != ranNum);
+
+        alert("恭喜你，猜对了！！");
+
+
+
+
+
+    </script>
+</body>
+</html>

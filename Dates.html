@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date</title>
+</head>
+<body>
+
+<script>
+
+
+/*//            获取当前的星期
+            var today = new Date(),
+
+            week = today.getDay(),
+
+            weeks = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+
+            document.write("今天是" + weeks[week]);*/
+
+
+
+
+/*//            封装获取当前时间的函数
+            function getDate(){
+
+
+                var date = new Date(),
+                        year = date.getFullYear(),
+                        month = date.getMonth()+1,
+                        day = date.getDate(),
+                        week = date.getDay(),
+                        hours = date.getHours(),
+                        minutes = date.getMinutes(),
+                        seconds = date.getSeconds(),
+                        weeks = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+
+
+                var newDate = "今天是"+year + "年"+ month + "月" + day + "日" +weeks[week]+"<br/>"+ hours + ":" + minutes + ":" + seconds;
+
+                return newDate;
+            }
+
+
+            document.write(new Date()+"<br/>");
+
+            document.write(getDate());*/
+
+
+
+
+
+//            员工合同到期时间
+
+    var inputYear = parseInt(prompt("请输入员工的入职年份"));
+
+    var inputMonth = parseInt(prompt("请输入员工的入职月份"));
+
+    var inputDate = parseInt(prompt("请输入员工的入职时间"));
+
+
+//    获取员工入职时间和合同到期时间
+
+    function  getDate(year,month,date) {
+
+        var today = new Date();
+
+            today.setYear(year);
+            today.setMonth(month);
+            today.setDate(date);
+
+             var   target = new Date();
+                target.setYear((year+3));
+                target.setMonth(month);
+                target.setDate(date);
+
+        var rutrn ="该员工的入职时间是：" + today.getFullYear() + "-" + today.getMonth() + "-" + today.getDate() + "<br/>" + "该员工的合同到期时间是:" + target.getFullYear() + "-" + target.getMonth() + "-" + target.getDate();
+
+        return rutrn;
+    }
+
+    document.write(getDate(inputYear,inputMonth,inputDate));
+
+
+
+</script>
+</body>
+</html>

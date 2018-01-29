@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var year=parseInt(prompt("请输入年份"));
+        var month=parseInt(prompt("请输入月份"));
+        var day=parseInt(prompt("请输入日期"));
+        // 如果输入错误，开始进入while循环
+        while (year.length!==4 || month<0 || month>12 || day<0 || day>32){
+            alert("输入错误，请重新输入！");
+            var year=prompt("请输入年份");
+            var month=prompt("请输入月份");
+            var day=prompt("请输入日期");
+        }
+        document.write("您的生日在"+year+"年是第"+allDays(year,month,day)+"天")
+        //开始计算本月之前的天数
+        function monthDays(){
+            var mdsum=0;
+            arguments[31,28,31,30,31,30,31,31,30,31,30,31];
+            for (i=0;i<=month;i++) {
+                mdsum+=arguments[i];
+            }
+            return mdsum;
+        }
+        //如果是闰年在总数后加1，否则不加
+        function runyear(){
+            var a=0;
+            if((year%4==0 && yearr%100!==0)||(year%400==0)){
+                return a+1;
+            }else{
+                return
+            }
+        }
+        //开始计算总共的天数
+        function allDays(year,month,day){
+            var a=monthDays(),
+                    b=runyear();
+            return a+b+day;
+        }
+    </script>
+</body>
+</html>

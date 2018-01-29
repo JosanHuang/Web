@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+
+
+    <script>
+
+
+
+        /* var book = new Array(4);
+         book[0] = "《三国演义》";
+         book[1] = "《红楼梦》";
+         book[2] = "《西游记》";
+         book[3] = "《水浒传》";
+         document.write(book+"<br/>");
+         document.write("该数组的长度是:" + book.length);*/
+
+
+
+        /*var arr = ["HTML","CSS","JavaScript","HTML5","CSS3"];
+        for(var i = 0 ; i < arr.length ; i++){
+             document.write(arr[i]+"<br/>");
+            // console.log(arr[i]);
+        }*/
+
+
+//        循环获取员工工资，直到退出
+        /*var salary = new Array();
+        var sa = prompt("请输入员工工资");
+        var i = 0 ;
+        while(sa != "退出"){
+            salary[i] = sa;
+
+            sa = prompt("请输入员工工资");
+
+            i++ ;
+        }
+
+        document.write(salary);*/
+
+
+/*
+//        反转
+        function arrReverse(arr){
+            var newArr=[];
+            for(var i=0;i<arr.length;i++){
+                //补充代码
+                newArr.unshift(arr[i]);
+            }
+            for(var j=0;j<newArr.length;j++){
+                newArr[i];
+            }
+            return newArr;
+        }
+        document.write(arrReverse([1,2,3,4,5,6,7,8]));*/
+
+
+        /*var input;
+        var arr=[ ];
+        var i = 0;
+        while(input!="-1"){
+            input=Number(prompt("请输入您想排序的数字"));
+            arr[i] = input;
+            i++;
+        }
+        //补充代码
+        console.log(arr);
+        arr.pop();
+        arr.sort(function (a , b) {
+            return a < b;
+        }); //补充代码
+        document.write(arr);*/
+
+
+        /*var input;
+        var i = 0 ;
+        var arr = new Array();
+        do{
+            input = prompt("请输入任意你想输入的字符");
+            arr[i] = input;
+            i++;
+        }while(input != "-1");
+
+
+        arr.pop();
+
+        arr.splice(0 ,2 , "hello","hello");
+
+        document.write(arr);*/
+
+
+        /*function arrayIndexOf(arr,value) {
+         for(var i = 0 ; i < arr.length ; i++){
+         if (arr[i] === value){
+         return i;
+         }
+         }
+         return -1;
+         }
+
+         num = [1,2,4,6,8,9,3,0,]
+         var index = arrayIndexOf(num,9);
+         console.log(index);*/
+
+
+        var  arr = new Array();
+
+        var i = 0;
+
+        do{
+
+            var sa = prompt("请输入员工工资");
+
+            arr[i] = sa;
+
+            i++;
+
+        }while(sa != "退出");
+
+        arr.pop();
+
+        document.write(arr);
+
+    </script>
+
+</body>
+</html>
